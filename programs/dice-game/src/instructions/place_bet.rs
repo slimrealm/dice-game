@@ -6,10 +6,11 @@ use anchor_lang::{
 use crate::state::Bet;
 
 #[derive(Accounts)]
-#[instruction(seed: u64)]
+#[instruction(seed: u128)]
 pub struct PlaceBet<'info> {
     #[account(mut)]
     pub player: Signer<'info>,
+    /// CHECK: this is safe
     pub house: UncheckedAccount<'info>,
 
     #[account(
@@ -28,14 +29,14 @@ pub struct PlaceBet<'info> {
     pub bet: Account<'info, Bet>,
     pub system_program: Program<'info, System>,
 }
-
+//     pub fn create_bet(&mut self, bumps: &PlaceBetBumps, seed: u128, roll: u8, amount: u64) -> Result<()> {
 impl<'info> PlaceBet<'info> {
     pub fn create_bet(
         &mut self,
-        seed: u64,
         bumps: &PlaceBetBumps,
-        amount: u64,
+        seed: u128,
         roll: u8,
+        amount: u64,
     ) -> Result<()> {
         self.bet.set_inner(Bet {
             player: self.player.key(),
