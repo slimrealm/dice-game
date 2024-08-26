@@ -5,7 +5,7 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-dice_game = "8nkxMNBPwGobzFPjXLgK7yM4eYYfzK4V3ZKLbojehFkW"
+dice_game = "911HL5Hz4xhukcvbaDDSzbKJidsbW6dzwPTGQrRZZjCf"
 
 [registry]
 url = "https://api.apr.dev"

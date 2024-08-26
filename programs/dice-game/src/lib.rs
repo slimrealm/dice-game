@@ -9,7 +9,7 @@ pub use constants::*;
 pub use instructions::*;
 pub use state::*;
 
-declare_id!("8nkxMNBPwGobzFPjXLgK7yM4eYYfzK4V3ZKLbojehFkW");
+declare_id!("911HL5Hz4xhukcvbaDDSzbKJidsbW6dzwPTGQrRZZjCf");
 
 #[program]
 pub mod dice_game {

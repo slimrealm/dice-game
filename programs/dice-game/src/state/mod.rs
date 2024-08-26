@@ -11,7 +11,7 @@ pub struct Bet {
 }
 
 impl Bet {
-    pub const LEN: usize = 8 + 32 + 8 * 3 + 1 * 2;
+    pub const LEN: usize = 8 + 32 + 16 + 8 * 2 + 1 * 2;
 
     // For doing introspection
     pub fn to_slice(&self) -> Vec<u8> {
